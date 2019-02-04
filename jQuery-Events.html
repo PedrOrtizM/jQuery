@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery - Events</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $("#clase1").click(function() {
+                $(this).hide();
+            })
+            $("#clase2").dblclick(function() {
+                $(this).hide();
+            })
+            $("#clase3").mouseenter(function() {
+                alert("Pasaste el mouse!");
+            })
+            $("#clase4").mousedown(function() {
+                alert("Mouse presionado en p");
+            })
+            $("#clase5").mouseup(function() {
+                alert("Mouse presionado en p");
+            })
+            $("#clase6").hover(function() {
+                    alert("TU entraste en p!");
+                },
+                function() {
+                    alert("Bye! Tu saliste de p!");
+                })
+
+            $("#clase7").on({
+                mouseenter: function() {
+                    $(this).css("background-color", "lightgray")
+                },
+                mouseleave: function() {
+
+                    $(this).css("background-color", "lightblue")
+                },
+                mousedown: function() {
+
+                    $(this).css("background-color", "yellow")
+                },
+                mouseup: function() {
+
+                    $(this).css("background-color", "blue")
+                }
+
+            })
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+
+            $("input").focus(function() {
+
+                $(this).css("background-color", "#cccccc")
+
+            })
+
+            $("input").blur(function() {
+
+                $(this).css("background-color", "#ffffff")
+            })
+
+
+        })
+    </script>
+</head>
+
+<body>
+
+    <h1>jQuery - Events</h1>
+    <hr>
+
+    <p style="width: 15%" id="clase1">Párrafo con evento Click</p>
+    <p style="width: 15%" id="clase2">Párrafo2 con evento DobleClick</p>
+    <p style="width: 15%" id="clase3">Pasa el mouse y muestro alert</p>
+    <p style="width: 15%" id="clase4"> Presiona mouse </p>
+    <p style="width: 15%" id="clase5"> Levanta click mouse </p>
+    <p style="width: 15%" id="clase6"> Combinacion de enter y leave </p>
+    <p style="width: 15%" id="clase7"> Pasa , deja y click </p>
+    <hr>
+    <br>
+    <span> NOMBRE: </span>
+    <input type="text" style="width: 8%">
+    <span> EMAIL:</span>
+    <input type="email" style="width: 8%">
+
+
+
+</body>
+
+</html>

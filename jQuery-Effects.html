@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery - Effects</title>
+
+    <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- ---------------------------------------------- -->
+    <script>
+        $(document).ready(function() {
+
+            $("#ocultar").click(function() {
+
+                $("p").hide(1000)
+            })
+
+            $("#mostrar").click(function() {
+
+                $("p").show(1000)
+            })
+
+
+            $("button.om").click(function() {
+
+                $("p.clase2").toggle(1000)
+            })
+
+        })
+    </script>
+    <!-- ---------------------------------------------- -->
+
+    <script>
+        $(document).ready(function() {
+
+            $("#fade").click(function() {
+                $("#div1").fadeToggle();
+                $("#div2").fadeToggle("slow");
+                $("#div3").fadeToggle(3000);
+            });
+
+
+        });
+    </script>
+    <!-- ---------------------------------------------- -->
+
+    <script>
+        $(document).ready(function() {
+
+            $("div.titulo").click(function() {
+
+                $("div.panel").slideToggle("fast")
+
+            })
+
+
+        })
+    </script>
+
+    <!-------------------------------------------------->
+
+</head>
+
+<body>
+
+    <h1>jQuery - Effects</h1>
+    <hr>
+
+    <p>Párrafo Numero 1</p>
+    <p>Párrafo Numero 2</p>
+    <button id="ocultar">Ocultar</button>
+    <button id="mostrar">Mostrar</button>
+
+
+    <p class="clase2">Párrafo Numero 3</p>
+    <p class="clase2"> Párrafo Numero 4</p>
+    <button class="om">Ocultar / Mostrar</button>
+
+    <hr>
+
+    <p>Demonstrate fadeIn() with different parameters.</p>
+
+    <button id="fade">Click to fade in/out boxes</button><br><br>
+
+    <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+    <div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+    <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+
+    <hr>
+
+    <div class="titulo" style="background-color: darkgray; text-align: center">TITULO</div>
+
+    <div class="panel" style="background-color: darkcyan">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error harum nostrum quia inventore non explicabo iure officiis quos quas voluptatum sunt exercitationem sapiente soluta officia quasi beatae, voluptates, aliquid ab.
+    </div>
+
+    <hr>
+
+    <a href="https://www.w3schools.com/">Clic para ver donde encontré la informacion</a>
+
+
+</body>
+
+</html>

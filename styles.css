@@ -1,0 +1,44 @@
+body {
+    /* background-image: url("Untitled.png"); */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+h1 {
+    border-left-style: solid;
+    border-width: 5px;
+    border-left-color: blue;
+    background-color: cornflowerblue;
+    font-size: 5vw;
+    /* 5vw para que se ajuste al tamaño del navegador
+       1vw = 1% */
+}
+
+
+/* unvisited link */
+
+a:link {
+    color: red;
+}
+
+
+/* visited link */
+
+a:visited {
+    color: green;
+}
+
+
+/* mouse over link */
+
+a:hover {
+    color: hotpink;
+}
+
+
+/* selected link */
+
+a:active {
+    color: blue;
+}
